@@ -54,7 +54,7 @@ export default function AdminPage() {
     // Dynamic import to keep bundle small
     const JSZip = (await import("jszip")).default;
     const zip = new JSZip();
-    const folder = zip.folder("vjenčanje-fotografije")!;
+    const folder = zip.folder("venčanje-fotografije")!;
 
     await Promise.all(
       photos.map(async (photo, i) => {
@@ -76,7 +76,7 @@ export default function AdminPage() {
     const url = URL.createObjectURL(content);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "vjenčanje-fotografije.zip";
+    a.download = "venčanje-fotografije.zip";
     a.click();
     URL.revokeObjectURL(url);
     setDownloading(false);

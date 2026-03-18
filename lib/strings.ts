@@ -18,8 +18,8 @@ function photoAccusative(n: number): string {
 
 export const S = {
   // Guest page
-  pageTitle: "Podijelite vaše fotografije",
-  pageSubtitle: "Svaka vaša fotografija je dragocjeno sjećanje.",
+  pageTitle: "Podelite vaše fotografije",
+  pageSubtitle: "Svaka vaša fotografija je dragoceno sećanje.",
   uploadButton: "Dodajte fotografije",
   cameraButton: "Uslikajte trenutak",
   namePlaceholder: "Vaše ime (opciono)",
@@ -42,11 +42,11 @@ export const S = {
 
   // Admin
   adminLoginTitle: "Prijava za administratora",
-  adminLoginSubtitle: "Pristup galeriji vjenčanja",
+  adminLoginSubtitle: "Pristup galeriji venčanja",
   passwordLabel: "Lozinka",
   loginButton: "Prijavi se",
   loginError: "Pogrešna lozinka. Pokušajte ponovo.",
-  adminGalleryTitle: "Galerija vjenčanja",
+  adminGalleryTitle: "Galerija venčanja",
   adminPhotosCount: (n: number) => `${n} ${photoNominative(n)}`,
   deleteButton: "Obriši",
   downloadAll: "Preuzmi sve",

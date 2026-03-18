@@ -1,5 +1,5 @@
 export const WEDDING_NAMES = process.env.NEXT_PUBLIC_WEDDING_NAMES ?? "David & Aleksandra";
-export const WEDDING_DATE = process.env.NEXT_PUBLIC_WEDDING_DATE ?? "Nedjelja, 26. april 2026.";
+export const WEDDING_DATE = process.env.NEXT_PUBLIC_WEDDING_DATE ?? "Nedelja, 26. april 2026.";
 export const MAX_FILES_PER_UPLOAD = 20;
 export const MAX_FILE_SIZE_MB = 10;
 export const COMPRESS_MAX_WIDTH = 1920;

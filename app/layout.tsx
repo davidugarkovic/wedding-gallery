@@ -16,7 +16,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: `${WEDDING_NAMES} · Galerija`,
-  description: `Podijelite vaše fotografije sa vjenčanja ${WEDDING_NAMES}`,
+  description: `Podelite vaše fotografije sa venčanja ${WEDDING_NAMES}`,
 };
 
 export default function RootLayout({
@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="cnr"
+      lang="sr"
       className={`${cormorant.variable} ${inter.variable} h-full`}
     >
       <body className="min-h-full bg-stone-50 text-stone-800">{children}</body>
