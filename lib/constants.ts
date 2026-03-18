@@ -1,0 +1,10 @@
+export const WEDDING_NAMES = process.env.NEXT_PUBLIC_WEDDING_NAMES ?? "David & Aleksandra";
+export const WEDDING_DATE = process.env.NEXT_PUBLIC_WEDDING_DATE ?? "Nedjelja, 26. april 2026.";
+export const MAX_FILES_PER_UPLOAD = 20;
+export const MAX_FILE_SIZE_MB = 10;
+export const COMPRESS_MAX_WIDTH = 1920;
+export const COMPRESS_QUALITY = 0.82;
+export const COMPRESS_TARGET_KB = 800;
+export const BUCKET_NAME = "wedding-photos";
+export const RATE_LIMIT_MAX = 50;
+export const RATE_LIMIT_WINDOW_HOURS = 1;
