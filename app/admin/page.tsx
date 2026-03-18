@@ -134,7 +134,7 @@ export default function AdminPage() {
         {loading ? (
           <div className="text-center py-20 text-stone-400">
             <div className="animate-pulse text-3xl mb-3">📷</div>
-            <p className="text-sm">Učitavanje…</p>
+            <p className="text-sm">{S.uploading}</p>
           </div>
         ) : (
           <PhotoGrid photos={photos} onDelete={handleDelete} />

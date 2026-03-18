@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="bs"
+      lang="cnr"
       className={`${cormorant.variable} ${inter.variable} h-full`}
     >
       <body className="min-h-full bg-stone-50 text-stone-800">{children}</body>

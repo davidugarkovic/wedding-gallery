@@ -223,13 +223,13 @@ export default function UploadZone() {
             disabled={isUploading}
             className="w-full py-4 bg-stone-800 text-white rounded-2xl text-base font-medium disabled:opacity-50 transition-colors"
           >
-            {isUploading ? S.uploading : `Učitajte ${files.length} fotografija`}
+            {isUploading ? S.uploading : S.uploadPhotos(files.length)}
           </button>
           <button
             onClick={handleReset}
             className="w-full py-3 text-sm text-stone-400 hover:text-stone-600"
           >
-            Odustani
+            {S.cancelButton}
           </button>
         </div>
       )}

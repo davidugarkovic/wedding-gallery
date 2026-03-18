@@ -1,5 +1,7 @@
 "use client";
 
+import { S } from "@/lib/strings";
+
 interface ProgressBarProps {
   progress: number; // 0-100
   filename: string;
@@ -21,7 +23,7 @@ export default function ProgressBar({
       : status === "error"
       ? "✗"
       : status === "compressing"
-      ? "Priprema…"
+      ? S.preparingFile
       : `${progress}%`;
 
   const barColor =
