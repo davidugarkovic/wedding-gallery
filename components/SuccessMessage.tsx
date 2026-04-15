@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { S } from "@/lib/strings";
 
 interface SuccessMessageProps {
@@ -8,6 +9,8 @@ interface SuccessMessageProps {
 }
 
 export default function SuccessMessage({ uploadedUrls, onUploadMore }: SuccessMessageProps) {
+  const [lightbox, setLightbox] = useState<string | null>(null);
+
   return (
     <div className="text-center">
       <div className="text-gold text-2xl mb-4 tracking-[0.4em]">✦</div>
@@ -24,7 +27,8 @@ export default function SuccessMessage({ uploadedUrls, onUploadMore }: SuccessMe
                 key={i}
                 src={url}
                 alt={`Fotografija ${i + 1}`}
-                className="w-full aspect-square object-cover rounded-lg shadow-sm"
+                className="w-full aspect-square object-cover rounded-lg shadow-sm cursor-pointer hover:opacity-90 transition-opacity"
+                onClick={() => setLightbox(url)}
               />
             ))}
           </div>
@@ -37,6 +41,27 @@ export default function SuccessMessage({ uploadedUrls, onUploadMore }: SuccessMe
       >
         {S.uploadMore}
       </button>
+
+      {/* Lightbox */}
+      {lightbox && (
+        <div
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+          onClick={() => setLightbox(null)}
+        >
+          <img
+            src={lightbox}
+            alt="Fotografija"
+            className="max-w-full max-h-full object-contain rounded-lg"
+            onClick={(e) => e.stopPropagation()}
+          />
+          <button
+            onClick={() => setLightbox(null)}
+            className="absolute top-4 right-4 text-white text-2xl w-10 h-10 flex items-center justify-center bg-white/20 hover:bg-white/30 rounded-full"
+          >
+            ×
+          </button>
+        </div>
+      )}
     </div>
   );
 }
