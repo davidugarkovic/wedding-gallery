@@ -28,10 +28,10 @@ export default function ProgressBar({
 
   const barColor =
     status === "done"
-      ? "bg-green-400"
+      ? "bg-gold"
       : status === "error"
       ? "bg-red-400"
-      : "bg-stone-400";
+      : "bg-gold";
 
   return (
     <div className="flex items-center gap-3 py-2">
@@ -47,7 +47,7 @@ export default function ProgressBar({
           <span className="text-xs text-stone-500 truncate pr-2">{filename}</span>
           <span className="text-xs text-stone-400 flex-shrink-0">{label}</span>
         </div>
-        <div className="h-1.5 bg-stone-100 rounded-full overflow-hidden">
+        <div className="h-1.5 bg-gold-light/40 rounded-full overflow-hidden">
           <div
             className={`h-full rounded-full transition-all duration-300 ${barColor}`}
             style={{ width: `${Math.min(progress, 100)}%` }}

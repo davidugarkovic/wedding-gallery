@@ -29,7 +29,7 @@ export default function RootLayout({
       lang="sr"
       className={`${cormorant.variable} ${inter.variable} h-full`}
     >
-      <body className="min-h-full bg-stone-50 text-stone-800">{children}</body>
+      <body className="min-h-full bg-background text-foreground">{children}</body>
     </html>
   );
 }

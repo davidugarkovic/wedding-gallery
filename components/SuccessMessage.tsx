@@ -10,7 +10,7 @@ interface SuccessMessageProps {
 export default function SuccessMessage({ uploadedUrls, onUploadMore }: SuccessMessageProps) {
   return (
     <div className="text-center">
-      <div className="text-4xl mb-4">💐</div>
+      <div className="text-gold text-2xl mb-4 tracking-[0.4em]">✦</div>
       <p className="text-lg font-semibold text-stone-700 mb-1">{S.uploadSuccess}</p>
 
       {uploadedUrls.length > 0 && (
@@ -33,7 +33,7 @@ export default function SuccessMessage({ uploadedUrls, onUploadMore }: SuccessMe
 
       <button
         onClick={onUploadMore}
-        className="mt-8 px-6 py-3 border border-stone-300 text-stone-600 rounded-full text-sm hover:bg-stone-50 transition-colors"
+        className="mt-8 px-6 py-3 border border-gold-light text-stone-600 rounded-full text-sm hover:bg-gold-light/20 transition-colors"
       >
         {S.uploadMore}
       </button>

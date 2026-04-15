@@ -152,7 +152,7 @@ export default function UploadZone() {
           placeholder={S.namePlaceholder}
           value={uploaderName}
           onChange={(e) => setUploaderName(e.target.value)}
-          className="w-full px-4 py-3 border border-stone-200 rounded-xl text-base text-stone-700 placeholder-stone-300 focus:outline-none focus:border-stone-400 bg-white"
+          className="w-full px-4 py-3 border border-gold-light rounded-xl text-base text-stone-700 placeholder-stone-300 focus:outline-none focus:border-gold bg-white"
           style={{ fontSize: "16px" }}
         />
       </div>
@@ -162,13 +162,13 @@ export default function UploadZone() {
         <div className="space-y-3">
           <button
             onClick={() => galleryInputRef.current?.click()}
-            className="w-full py-4 bg-stone-800 text-white rounded-2xl text-base font-medium active:bg-stone-900 transition-colors"
+            className="w-full py-4 bg-charcoal text-ivory rounded-2xl text-base font-medium active:opacity-90 transition-colors"
           >
             {S.uploadButton}
           </button>
           <button
             onClick={() => cameraInputRef.current?.click()}
-            className="w-full py-4 border border-stone-300 text-stone-600 rounded-2xl text-base hover:bg-stone-50 transition-colors"
+            className="w-full py-4 border border-gold-light text-stone-600 rounded-2xl text-base hover:bg-gold-light/20 transition-colors"
           >
             {S.cameraButton}
           </button>
@@ -221,7 +221,7 @@ export default function UploadZone() {
           <button
             onClick={handleUpload}
             disabled={isUploading}
-            className="w-full py-4 bg-stone-800 text-white rounded-2xl text-base font-medium disabled:opacity-50 transition-colors"
+            className="w-full py-4 bg-charcoal text-ivory rounded-2xl text-base font-medium disabled:opacity-50 transition-colors"
           >
             {isUploading ? S.uploading : S.uploadPhotos(files.length)}
           </button>
